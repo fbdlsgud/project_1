@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.himedia.project_1.dao.IUserDao">
+    <insert id="InsertUser" parameterType="com.himedia.project_1.dto.UserVo">
+        insert into user(id,pwd,name,phone, email) values (#{id},#{pwd},#{name},#{phone},#{email})
+    </insert>
+    <select id="getUser" resultType="com.himedia.project_1.dto.UserVo">
+        select *from user where id=#{param1}
+    </select>
+
+
+<!--    카카오 로그인할 때 비번 -->
+    <update id="updateUserWithPassword">
+        UPDATE user
+        SET pwd = #{pwd}
+        WHERE id = #{id};
+    </update>
+</mapper>

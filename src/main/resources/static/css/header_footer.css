@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+/* 전체 스타일 */
+body {
+	font-family: 'Arial', sans-serif;
+	margin: 0;
+	padding: 0;
+	background-color: #f9f9f9;
+}
+
+@charset "UTF-8";
+#wrap {
+	max-width: 1200px; /* 최대 너비 */
+	margin: 0 auto;    /* 가운데 정렬 */
+	padding: 0 20px;   /* 좌우 여백 */
+}
+
+/* header 스타일 */
+header {
+	width: 100%;
+	display: block;
+	justify-content: space-between; /* 요소를 양쪽으로 정렬 */
+	align-items: center;            /* 요소를 수직 중앙 정렬 */
+	padding: 10px 20px;
+	box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+	background-color: #ffffff;
+}
+
+/* 로고 */
+#logo {
+	flex: 1; /* 로고가 왼쪽으로 넓게 배치 */
+}
+
+
+
+/* 검색창 */
+.search-bar {
+	flex: 3; /* 검색창이 가운데서 넓게 배치 */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-bar form {
+	display: flex;
+	width: 100%;
+	max-width: 500px; /* 검색창 최대 너비 */
+	border: 1px solid #ddd;
+	border-radius: 20px;
+	overflow: hidden;
+	background-color: #f8f9fa;
+}
+
+.search-bar input[type="text"] {
+	flex: 1;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	padding: 10px 15px;
+}
+
+.search-bar button {
+	background-color: #007bff;
+	border: none;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.search-bar button img {
+	width: 16px;
+	height: 16px;
+}
+
+/* gnb 메뉴 */
+.gnb {
+	flex: 2; /* gnb가 오른쪽으로 배치 */
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px; /* 각 메뉴 사이 간격 */
+}
+
+.gnb a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	padding: 5px 10px;
+	color: #333;
+	font-size: 14px;
+	border-radius: 5px;
+	transition: all 0.2s ease-in-out;
+}
+
+.gnb a:hover {
+	background-color: #f0f0f0;
+	color: #007bff;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+	header {
+		flex-wrap: wrap;
+	}
+
+	#logo {
+		flex: none;
+		margin-bottom: 10px;
+	}
+
+	.search-bar {
+		flex: none;
+		width: 100%;
+	}
+
+	.gnb {
+		display: none; /* 햄버거 메뉴로 대체 */
+	}
+}
+
+
+
+/* 푸터 스타일 */
+footer {
+	background-color: #f8f9fa;
+	text-align: center;
+	padding: 20px;
+	color: #666;
+	font-size: 14px;
+	line-height: 1.6;
+	border-top: 1px solid #ddd;
+}
+
+footer a {
+	color: #007bff;
+	text-decoration: none;
+}
+
+footer a:hover {
+	text-decoration: underline;
+}
