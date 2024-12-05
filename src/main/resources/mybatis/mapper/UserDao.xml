@@ -18,4 +18,9 @@
         SET pwd = #{pwd}
         WHERE id = #{id};
     </update>
+
+<!--  관리자페이지에서 회원리스트 로드할때!!!!!!!  -->
+    <select id="getUserList" resultType="com.himedia.project_1.dto.UserVo">
+        SELECT * FROM user
+    </select>
 </mapper>

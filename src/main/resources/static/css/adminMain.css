@@ -114,3 +114,43 @@ header #logoutBtn:hover {
     color: #666;
     margin: 0;
 }
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+table th {
+    background-color: #4CAF50; /* 헤더 배경 색상 */
+    color: white;
+    text-align: center;
+}
+
+table tr:nth-child(even) {
+    background-color: #f2f2f2; /* 짝수 줄 배경 색상 */
+}
+
+table tr:hover {
+    background-color: #ddd; /* 마우스 오버 시 배경 색상 */
+}
+
+table td {
+    text-align: center; /* 데이터 가운데 정렬 */
+}
+
+/* QNA 목록 헤더 */
+h3 {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+    font-size: 24px;
+}
